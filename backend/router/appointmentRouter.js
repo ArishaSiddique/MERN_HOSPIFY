@@ -7,6 +7,8 @@ import {
 
 const router = express.Router();
 
+//making the authentication for the users that will be creating an appointment
+
 router.post("/post",isPatientAuthenticated, postAppointment);
 router.get("/getall", isAdminAuthenticated, getAllAppointments);
 router.put("/update/:id", isAdminAuthenticated, updateAppointmentStatus);
