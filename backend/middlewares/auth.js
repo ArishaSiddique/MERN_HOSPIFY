@@ -5,7 +5,7 @@ import { catchAsyncErrors } from "./catchAsyncErrors.js";
 import ErrorHandler from "./errorMiddleware.js";
 import jwt from "jsonwebtoken";
 
-
+//admin side
 //here we are trying to check token
 export const isAdminAuthenticated = catchAsyncErrors(async (req, res, next) =>{
     const token = req.cookies.adminToken;
@@ -22,7 +22,7 @@ export const isAdminAuthenticated = catchAsyncErrors(async (req, res, next) =>{
     next();
 });
 
-
+//for patient side
 export const isPatientAuthenticated = catchAsyncErrors(async (req, res, next) =>{
     const token = req.cookies.patientToken;//authorisation onwards
     if(!token){
