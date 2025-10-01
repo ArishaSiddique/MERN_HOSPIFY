@@ -5,7 +5,7 @@ import { User } from "../models/userSchema.js";
 
 export const postAppointment = catchAsyncErrors(async (req, res, next) => {
   const {
-    //required feilds
+    //required feilds..
     firstName,
     lastName,
     email,
